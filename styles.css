@@ -1,0 +1,88 @@
+:root {
+    --primary: #7b1113; /* UPLB Maroon */
+    --primary-hover: #5a0c0e;
+    --bg-color: #f4f6f8;
+    --card-bg: #ffffff;
+    --text-main: #2c3e50;
+    --success: #2e7d32;
+    --danger: #c62828;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-main);
+    line-height: 1.6;
+    margin: 0;
+    padding: 0 0 40px 0;
+}
+
+.navbar {
+    background-color: var(--primary);
+    color: white;
+    padding: 15px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    margin-bottom: 30px;
+}
+
+.navbar h1 { margin: 0; font-size: 1.5rem; }
+
+.btn {
+    background-color: white;
+    color: var(--primary);
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    border: none;
+}
+
+.btn:hover { background-color: #eee; }
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.card {
+    background: var(--card-bg);
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    margin-bottom: 25px;
+}
+
+h2 { color: var(--primary); border-bottom: 2px solid var(--primary); padding-bottom: 5px; }
+
+/* Exam Styles */
+.question-block {
+    margin-bottom: 25px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #ddd;
+}
+.question-text { font-weight: 600; font-size: 1.1rem; margin-bottom: 15px; }
+.options-grid { display: flex; flex-direction: column; gap: 10px; }
+.option-label {
+    display: flex; align-items: center; gap: 10px;
+    background: #f9f9f9; padding: 12px; border-radius: 5px;
+    cursor: pointer; border: 1px solid #eee; transition: 0.2s;
+}
+.option-label:hover { background: #f1f1f1; border-color: var(--primary); }
+.submit-btn { width: 100%; font-size: 1.2rem; padding: 15px; margin-top: 20px; }
+
+/* Results Styles */
+.module-score {
+    background: #eee; padding: 15px; border-radius: 5px; margin-bottom: 15px;
+    display: flex; justify-content: space-between; font-weight: bold;
+}
+.review-item { margin-bottom: 20px; padding: 15px; border-radius: 5px; background: #f9f9f9; }
+.review-correct { border-left: 5px solid var(--success); }
+.review-incorrect { border-left: 5px solid var(--danger); }
+.correct-text { color: var(--success); font-weight: bold; }
+.incorrect-text { color: var(--danger); font-weight: bold; }
+.real-answer { background: #e8f5e9; padding: 10px; border-radius: 4px; margin-top: 10px; color: var(--success); font-weight: bold; }
